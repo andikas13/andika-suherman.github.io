@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andika Suherman | Portfolio</title>
+
+<style>
+*{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f6fb;color:#333;line-height:1.7}
+nav{position:fixed;top:0;width:100%;background:#0f172a;padding:14px;z-index:1000}
+nav ul{list-style:none;display:flex;justify-content:center;gap:22px;margin:0;padding:0}
+nav a{color:#cbd5f5;text-decoration:none;font-weight:bold}
+nav a:hover{color:#38bdf8}
+header{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:140px 20px 90px;text-align:center}
+header img{width:160px;height:160px;border-radius:50%;border:4px solid #fff;object-fit:cover;margin-bottom:20px;animation:zoomIn 1.2s ease}
+section{max-width:1150px;margin:auto;padding:100px 20px;opacity:0;transform:translateY(60px);transition:all 1s ease}
+section.show{opacity:1;transform:translateY(0)}
+h2{color:#0f172a;border-bottom:3px solid #2563eb;display:inline-block;padding-bottom:6px;margin-bottom:30px}
+.card{background:#fff;padding:28px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.1);margin-bottom:28px;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 35px rgba(0,0,0,.15)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.grid img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:12px}
+footer{background:#0f172a;color:#cbd5f5;text-align:center;padding:30px}
+@keyframes zoomIn{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#profile">Profile</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#organization">Organization</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header id="home">
+<img src="profile.jpg" alt="Andika Suherman">
+<h1>Andika Suherman</h1>
+<p>Electrical Engineer | IoT & System Development</p>
+<p>Jakarta, Indonesia | 081413427075 | andikasuherman0017@gmail.com</p>
+</header>
+
+<section id="profile">
+<h2>Profile</h2>
+<div class="card">
+A recent graduate in Electrical Engineering with internship experience at the National Research and Innovation Agency (BRIN) in the Technology Innovation project for Charging Stations, Battery Swap Stations, and LoRa-based Communication Systems. Skilled in system management, data analysis, and IoT-based project development. Proven ability to enhance efficiency and effectiveness in digital system implementation and continuous improvement initiatives, with experience in technology-based projects. Currently seeking an opportunity to apply strong analytical and problem-solving skills to support digital transformation and technological innovation.
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="card grid">
+<div>
+<img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+<strong>Universitas Al Azhar Indonesia</strong><br>
+Bachelor of Electrical Engineering<br>
+2020 – 2025<br>
+GPA: 3.08 / 4.00
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1581093588401-16c57f37a6c4">
+<strong>Final Thesis</strong><br>
+Design of a Health Measurement System Integrated with IoT
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+Email: andikasuherman0017@gmail.com<br>
+Phone: 081413427075<br>
+LinkedIn: linkedin.com/in/andikasuherman13
+</div>
+</section>
+
+<footer>
+© 2025 Andika Suherman | Portfolio Website
+</footer>
+
+<script>
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add("show")}
+ })
+},{threshold:0.15});
+sections.forEach(s=>observer.observe(s));
+</script>
+
+</body>
+</html>
